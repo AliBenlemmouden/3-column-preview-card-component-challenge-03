@@ -1,0 +1,122 @@
+/* variables */
+:root{
+    --color-1: #e38826;
+    --color-2: #006970;
+    --color-3: #004241;
+    --color-4: #ffffffbf;
+    --color-5: #f2f2f2;
+    --main-font:'Big Shoulders Display', 'cursive';
+    --second-font:'Lexend Deca', sans-serif;
+}
+/* global rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: #ddddddbf;
+    flex-direction: column;
+}
+/* container */
+.container{
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    align-items: center;
+}
+.container .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 42px;
+}
+.container .card1{
+    background-color: var(--color-1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container .card2{
+    background-color: var(--color-2);
+}
+.container .card3{
+    background-color: var(--color-3);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container img{
+    margin: -10px 0;
+}
+.container h1{
+    font-family: var(--main-font);
+    font-variant: all-small-caps;
+    font-size: 50px;
+    color: var(--color-5);
+}
+.container p{
+    font-family: var(--second-font);
+    color: var(--color-4);
+    font-size: 13px;
+    line-height: 2;
+    padding-bottom: 26px;
+}
+.container button{
+    border: unset;
+    padding: 14px 40px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.container .card1 button{
+    color: var(--color-1);
+}
+.container .card2 button{
+    color: var(--color-2);
+}
+.container .card3 button{
+    color: var(--color-3);
+}
+footer{
+    color: black;
+    font-weight: bold;
+}
+footer a{
+    text-decoration: none;
+    color: green;
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 500px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+    }
+    .container .card1{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: unset;
+    }
+    .container .card3{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: unset;
+    }
+    footer{
+        position: absolute;
+        top: 1730px;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
